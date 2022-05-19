@@ -15,7 +15,9 @@ const Counter=({value})=>{
         <div>
           <h1> Counter App : <span style={clr}>{count}</span></h1>
           <button onClick={()=>setCount(count+1)}>increase</button>
-          <button  onClick={()=>setCount(count-1)}>decrease</button>
+          <button  onClick={()=>
+             {if(count>0){setCount(count-1)}} 
+             }>decrease</button>
          <button onClick={()=>setCount(count*2)}>double</button>
         </div>
     )
